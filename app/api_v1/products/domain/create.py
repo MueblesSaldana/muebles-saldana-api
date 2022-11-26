@@ -21,7 +21,6 @@ class Create:
                 img_size_mb     = convert_bytes(img_size_bytes,'m')
 
                 url = cloudinary.uploader.upload(image, folder='products/imgs')
-                print(url)
                 __imgs.append(
                     {
                         'url': url['secure_url'], 

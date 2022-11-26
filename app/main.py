@@ -9,6 +9,7 @@ from app.api_v1.users.route import router as router_users
 from app.api_v1.auth.route import router as router_auth
 from app.api_v1.sub_categories.route import router as router_sub_categories
 from app.api_v1.products.route import router as router_products
+from app.api_v1.home.route import router as router_home
 
 
 app = FastAPI(
@@ -34,3 +35,4 @@ app.include_router(router_users, prefix=settings.API_V1)
 app.include_router(router_auth, prefix=settings.API_V1)
 app.include_router(router_sub_categories, prefix=settings.API_V1)
 app.include_router(router_products, prefix=settings.API_V1)
+app.include_router(router_home, prefix=settings.API_V1)
